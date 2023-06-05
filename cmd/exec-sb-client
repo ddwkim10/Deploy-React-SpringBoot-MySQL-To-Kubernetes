@@ -1,0 +1,1 @@
+kubectl exec -it $(kubectl get pods | grep sb-client | sed 's/ .*//') -- sh

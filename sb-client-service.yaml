@@ -1,0 +1,18 @@
+apiVersion: v1
+
+kind: Service
+
+metadata:
+  name: sb-client
+  namespace: ingress-nginx
+  labels:
+    app: sb-client
+
+spec:
+  selector:
+    app: sb-client
+
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000

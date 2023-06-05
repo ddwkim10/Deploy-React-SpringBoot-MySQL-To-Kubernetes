@@ -1,0 +1,2 @@
+#kubectl delete persistentvolume pvc-c642e247-d68b-4e87-925b-7aac19288535
+kubectl delete pvc --all

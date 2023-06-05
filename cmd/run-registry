@@ -1,0 +1,1 @@
+docker run -d -p 5000:5000 --restart=always --name registry -v /home/xinu/onplatform/k8s/k8s-chart/registry-config.yaml registry:2

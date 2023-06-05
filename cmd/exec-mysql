@@ -1,0 +1,1 @@
+kubectl exec -it $(kubectl get pods | grep mysql | sed 's/ .*//') /bin/bash

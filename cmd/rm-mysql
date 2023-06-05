@@ -1,0 +1,5 @@
+kubectl delete deployment mysql
+kubectl delete service mysql
+docker system prune -a
+docker images
+kubectl get all

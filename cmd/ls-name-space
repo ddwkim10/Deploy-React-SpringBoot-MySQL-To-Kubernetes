@@ -1,0 +1,6 @@
+kubectl get namespace
+echo
+m="My "
+n=$(kubectl config view --minify | grep namespace:)
+#nspcae="$(echo -e "${n}" | sed -e 's/^[[:space:]]*//')"
+echo "$m$n"

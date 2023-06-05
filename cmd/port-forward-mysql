@@ -1,0 +1,1 @@
+kubectl port-forward $(kubectl get pods | grep mysql | sed 's/ .*//') 3306:3306 &
