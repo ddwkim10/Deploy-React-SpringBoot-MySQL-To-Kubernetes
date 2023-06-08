@@ -1,0 +1,7 @@
+cd /home/xinu/onplatform/k8s/clientDocker
+npm install --legacy-peer-deps --prefer-online
+docker build -t sb-client-img:v0.9 . --no-cache
+docker images
+#docker tag sb-client-img:v0.9 localhost:5000/sb-client-img:v0.9
+#docker push localhost:5000/sb-client-img:v0.9
+cd /home/xinu/onplatform/k8s/k8s-chart

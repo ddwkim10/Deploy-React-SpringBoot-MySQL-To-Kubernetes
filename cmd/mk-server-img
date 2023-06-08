@@ -1,0 +1,7 @@
+cd /home/xinu/onplatform/k8s/apiDocker
+mvn clean package -DskipTests
+docker build -t sb-server-img:v0.9 . --no-cache
+docker images
+#docker tag sb-server-img:v0.9 localhost:5000/sb-server-img:v0.9
+#docker push localhost:5000/sb-server-img:v0.9
+cd /home/xinu/onplatform/k8s/k8s-chart

@@ -1,0 +1,2 @@
+kubectl run -it --rm --image=localhost:5000/sb-server-img:v0.9 --restart=Never sb-server-pod
+

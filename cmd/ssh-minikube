@@ -1,0 +1,3 @@
+ssh -i ~/.minikube/machines/minikube/id_rsa docker@$(minikube ip)
+#sudo iptables -nt nat -L KUBE-SERVICES
+#sudo iptables -nt nat -L KUBE-SVC-FK3L6DSZVMHSESGR

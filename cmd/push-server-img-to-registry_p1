@@ -1,0 +1,6 @@
+docker tag sb-server-img:$1 localhost:5000/sb-server-img:$1
+docker push localhost:5000/sb-server-img:$1 &
+wait $!
+curl http://localhost:5000/v2/_catalog
+curl http://localhost:5000/v2/sb-server-img/tags/list
+

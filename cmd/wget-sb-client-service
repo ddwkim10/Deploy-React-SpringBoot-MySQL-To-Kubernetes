@@ -1,0 +1,8 @@
+kubectl exec -it sb-client-tab -- sh
+wget http://10.98.254.64:8080/icare/showAll -O get-data-1.txt
+post-data-1.txt
+{
+	"name": "Donald Trump",
+	"address": "Washington DC"
+}
+wget --post-file post-data-1.txt http://10.98.254.64:8080/icare/add --header=Content-Type:application/json

@@ -1,0 +1,3 @@
+minikube ssh
+#curl http://10.99.182.9:3000/icare/showAll
+curl http://10.99.182.9:3000

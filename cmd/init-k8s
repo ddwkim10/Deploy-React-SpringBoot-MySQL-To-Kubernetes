@@ -1,0 +1,16 @@
+minikube start --driver=docker
+mk-namespace-1
+eval-set-env-run-2
+#clean up docker images and containers
+#docker system prune -f -a
+#run-registry-3
+run-minikube-registry
+mk-client-img
+mk-server-img
+push-client-img-to-registry_p1 v0.9
+push-server-img-to-registry_p1 v0.9
+depl-mysql-4
+depl-server-5
+depl-client-6
+add-ingress-7
+config-ingress-8
