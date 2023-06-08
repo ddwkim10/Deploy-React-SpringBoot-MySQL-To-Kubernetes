@@ -1,2 +1,0 @@
-minikube ssh && curl localhost:5000
-exit

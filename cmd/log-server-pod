@@ -1,1 +1,0 @@
-kubectl logs $(kubectl get pods | grep sb-server-depl | sed 's/ .*//')

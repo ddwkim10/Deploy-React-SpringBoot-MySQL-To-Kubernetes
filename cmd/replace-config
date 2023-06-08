@@ -1,1 +1,0 @@
-kubectl replace -f mysql-configMap.yaml

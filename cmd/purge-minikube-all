@@ -1,2 +1,0 @@
-minikube delete --all --purge
-minikube status

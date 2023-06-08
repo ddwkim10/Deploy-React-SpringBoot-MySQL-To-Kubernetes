@@ -1,3 +1,0 @@
-kubectl apply -f mysql-secrets.yaml
-kubectl apply -f mysql-configMap.yaml
-kubectl apply -f mysql-deployment.yaml

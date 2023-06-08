@@ -1,2 +1,0 @@
-docker exec localregistry bin/registry garbage-collect --delete-untagged /etc/docker/registry/config.yml
-docker restart localregistry

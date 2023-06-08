@@ -1,1 +1,0 @@
-curl -v -X DELETE http://localhost:5000/v2/sb-server-img:v0.9/manifests/$1

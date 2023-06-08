@@ -1,1 +1,0 @@
-kubectl logs $(kubectl get pods | grep mysql-depl | sed 's/ .*//')
