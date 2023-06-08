@@ -1,0 +1,4 @@
+kubectl delete deployment sb-client
+kubectl delete service sb-client
+kubectl delete pod $(kubectl get pods | grep sb-client  | sed 's/ .*//')
+kubectl get all

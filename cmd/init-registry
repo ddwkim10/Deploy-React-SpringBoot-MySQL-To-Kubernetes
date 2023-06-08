@@ -1,0 +1,4 @@
+run-registry-3
+docker ps
+push-img-to-registry_param_1 v0.9
+

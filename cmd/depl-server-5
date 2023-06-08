@@ -1,0 +1,4 @@
+kubectl apply -f sb-server-deployment.yaml
+kubectl get pods -o wide
+kubectl get service sb-server-svc -o wide
+kubectl get deployment sb-server-deployment -o wide
