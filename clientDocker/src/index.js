@@ -4,10 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// console.log(require('dotenv').config({path: '../.env'}))
-console.log('REACT_APP_CLIENT_K8S:', process.env.REACT_APP_CLIENT_K8S)
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />

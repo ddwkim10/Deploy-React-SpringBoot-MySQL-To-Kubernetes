@@ -1,0 +1,48 @@
+kubectl exec -it pod/sb-client-7994557cdb-6vqlj  -- sh
+
+
+/sb-client # ping 10.244.0.57
+PING 10.244.0.57 (10.244.0.57): 56 data bytes
+64 bytes from 10.244.0.57: seq=0 ttl=64 time=0.565 ms
+64 bytes from 10.244.0.57: seq=1 ttl=64 time=0.083 ms
+64 bytes from 10.244.0.57: seq=2 ttl=64 time=0.097 ms
+^C
+--- 10.244.0.57 ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.083/0.248/0.565 ms
+/sb-client # nslookup 10.244.0.57
+Server:		10.96.0.10
+Address:	10.96.0.10:53
+
+57.0.244.10.in-addr.arpa	name = 10-244-0-57.springboot-crud-svc.ingress-nginx.svc.cluster.local
+
+/sb-client # ping springboot-crud-svc
+PING springboot-crud-svc (10.103.226.223): 56 data bytes
+^C
+--- springboot-crud-svc ping statistics ---
+3 packets transmitted, 0 packets received, 100% packet loss
+/sb-client # ping 10-244-0-57.springboot-crud-svc.ingress-nginx.svc.cluster.local
+PING 10-244-0-57.springboot-crud-svc.ingress-nginx.svc.cluster.local (10.244.0.57): 56 data bytes
+64 bytes from 10.244.0.57: seq=0 ttl=64 time=0.087 ms
+64 bytes from 10.244.0.57: seq=1 ttl=64 time=0.092 ms
+64 bytes from 10.244.0.57: seq=2 ttl=64 time=0.083 ms
+^C
+--- 10-244-0-57.springboot-crud-svc.ingress-nginx.svc.cluster.local ping statistics ---
+3 packets transmitted, 3 packets received, 0% packet loss
+round-trip min/avg/max = 0.083/0.087/0.092 ms
+/sb-client # nslookup springboot-crud-svc
+Server:		10.96.0.10
+Address:	10.96.0.10:53
+
+** server can't find springboot-crud-svc.cluster.local: NXDOMAIN
+
+
+Name:	springboot-crud-svc.ingress-nginx.svc.cluster.local
+Address: 10.103.226.223
+
+** server can't find springboot-crud-svc.svc.cluster.local: NXDOMAIN
+
+** server can't find springboot-crud-svc.cluster.local: NXDOMAIN
+
+** server can't find springboot-crud-svc.svc.cluster.local: NXDOMAIN
+

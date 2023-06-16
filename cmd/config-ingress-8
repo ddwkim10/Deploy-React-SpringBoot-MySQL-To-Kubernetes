@@ -1,1 +1,3 @@
-kubectl create -f sb-ingress.yaml
+kubectl apply -f sb-ingress.yaml
+#grep net.ipv4.ip_forward /etc/sysctl.conf 
+#net.ipv4.ip_forward=1

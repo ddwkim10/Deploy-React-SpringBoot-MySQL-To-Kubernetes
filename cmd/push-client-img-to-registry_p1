@@ -1,0 +1,2 @@
+docker tag sb-client-img:$1 localhost:5000/sb-client-img:$1
+docker push localhost:5000/sb-client-img:$1 &

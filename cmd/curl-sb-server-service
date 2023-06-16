@@ -1,5 +1,5 @@
 minikube ssh
-curl http://10.98.254.64:8080/icare/showAll
+curl http://10.98.254.64:8080/icare/showAll // must be a server service ip address
 data1.txt
 {
 	"name": "Alice",

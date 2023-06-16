@@ -9,15 +9,12 @@ export default function ICareMemberInput() {
       const[name,setName]=useState('')
       const[address,setAddress]=useState('')
       const[members,setMembers]=useState([])
+      const addURL = "http://10.106.9.252:8080/icare/add"
+      const showAllURL = "http://10.106.9.252:8080/icare/showAll"
 
-      // const addURL = `http://${process.env.REACT_APP_SERVER_NAME}:8080/icare/add`
-      // const showAllURL = `http://${process.env.REACT_APP_SERVER_NAME}:8080/icare/showAll`
-      const addURL = "http://172.21.0.2:8080/icare/add"
-      const showAllURL = "http://172.21.0.2:8080/icare/showAll" 
- 
       console.log(addURL)
       console.log(showAllURL)
-      
+
       const handleClick=(e)=>{
         e.preventDefault()
         const member={name,address}
@@ -33,8 +30,10 @@ export default function ICareMemberInput() {
       }
 
       useEffect(()=>{
-        fetch(showAllURL)
-        .then(res=>res.json())
+       fetch(showAllURL, {
+	        method:"GET",
+          headers:{"Content-Type":"application/json"}
+       }).then(res=>res.json())
         .then((result)=>{
           setMembers(result);
           }  

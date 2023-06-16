@@ -1,2 +1,4 @@
+minikube ssh
 curl http://localhost:5000/v2/_catalog
 curl http://localhost:5000/v2/sb-server-img/tags/list
+exit
